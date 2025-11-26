@@ -1,0 +1,63 @@
+@media (max-width: 360px) {
+    /* Página desarrollos web */
+    body.desarrollos .proyectos-web h2 {
+        font-size: 1.2em;
+        /* más chico en móvil pequeño */
+    }
+
+    body.desarrollos .proyectos-web {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+        padding: 1em 0.75em;
+        max-width: 640px;
+    }
+
+    /* Contenedor y elementos internos para mejor legibilidad */
+    body.desarrollos main,
+    body.desarrollos .proyectos-web {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    body.desarrollos h1 {
+        font-size: 1.6em;
+        line-height: 1.2;
+        margin: 0.75em 0 0.5em;
+        padding: 0 0.75em;
+    }
+
+    body.desarrollos p {
+        padding: 0 0.9em;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    body.desarrollos .proyectos-web img,
+    body.desarrollos .proyectos-web video,
+    body.desarrollos .proyectos-web iframe {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    body.desarrollos .header-menu-desarrollos-web {
+        font-size: 1em;
+        padding: 0.5em 0.75em;
+    }
+
+    body.desarrollos .menu-navegacion-desarrollos-web {
+        gap: 1em;
+    }
+
+    body.desarrollos h1 {
+        font-size: 1.5em;
+        padding: 0 1em;
+    }
+
+    body.desarrollos p {
+        padding: 0 1em;
+        font-size: 0.9em;
+    }
+}

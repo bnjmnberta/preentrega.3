@@ -1,0 +1,6 @@
+/* Box model: hacer que padding/border se incluya en el ancho/alto */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

@@ -1,0 +1,25 @@
+body.sobremi .habilidades {
+    text-align: left;
+}
+
+body.sobremi .lista-de-habilidades {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+body.sobremi .lista-de-habilidades li{
+    padding-left: 1.5em;
+    position: relative;
+    color: #333;
+}
+
+body.sobremi .lista-de-habilidades li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+}

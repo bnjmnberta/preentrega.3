@@ -1,0 +1,62 @@
+@media (min-width: 361px) and (max-width: 480px) {
+    /* Página desarrollos web */
+    body.desarrollos .proyectos-web h2 {
+        font-size: 1.25em;
+        /* más chico en móvil mediano */
+    }
+
+    body.desarrollos .proyectos-web {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+        padding: 1.25em 1em;
+        max-width: 720px;
+    }
+
+    body.desarrollos main,
+    body.desarrollos .proyectos-web {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    body.desarrollos h1 {
+        font-size: 1.9em;
+        line-height: 1.2;
+        margin: 0.9em 0 0.6em;
+        padding: 0 0.9em;
+    }
+
+    body.desarrollos p {
+        padding: 0 1em;
+        font-size: 1.02em;
+        line-height: 1.55;
+    }
+
+    body.desarrollos .proyectos-web img,
+    body.desarrollos .proyectos-web video,
+    body.desarrollos .proyectos-web iframe {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+    }
+
+    body.desarrollos .header-menu-desarrollos-web {
+        font-size: 1.05em;
+        padding: 0.6em 0.9em;
+    }
+
+    body.desarrollos .menu-navegacion-desarrollos-web {
+        gap: 1.1em;
+    }
+
+    body.desarrollos h1 {
+        font-size: 1.8em;
+        padding: 0 1em;
+    }
+
+    body.desarrollos p {
+        padding: 0 1em;
+        font-size: 1em;
+    }
+}

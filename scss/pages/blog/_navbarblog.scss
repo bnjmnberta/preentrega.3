@@ -1,0 +1,12 @@
+body.blog .menu-navegacion-blog {
+    display: flex;
+    gap: 2em;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+body.blog .menu-navegacion-blog a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}

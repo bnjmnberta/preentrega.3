@@ -1,0 +1,25 @@
+@media (min-width: 361px) and (max-width: 480px) {
+    /* Página blog */
+    body.blog .blog-main {
+        max-width: 90%;
+        padding: 1.5em;
+    }
+
+    body.blog .blog-entrada {
+        padding: 1.5em;
+    }
+
+    body.blog .blog-entrada h2 {
+        font-size: 1.2em;
+    }
+
+    body.blog h1 {
+        font-size: 1.8em;
+        padding: 0 1em;
+    }
+
+    body.blog>p {
+        padding: 0 1em;
+        font-size: 1em;
+    }
+}

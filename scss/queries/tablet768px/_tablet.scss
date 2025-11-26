@@ -1,0 +1,7 @@
+/* Media query para pantallas de 768px (tablet) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+    width: 100%;
+    overflow-x: hidden;
+    }
+}

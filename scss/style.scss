@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/*  Básicos */
+@use "components/boxmodel";
+@use "utilities/base";
+@use "utilities/variables";
+@use "utilities/mixin";
+@use "utilities/extended";
+@use "boostrap/boostrap";
+@use "navbar/navbar";
+@use "footer/footer";
+
+/* Páginas - inicio */
+@use "pages/inicio/body";
+@use "pages/inicio/header";
+@use "pages/inicio/logo";
+@use "pages/inicio/navmenu";
+
+/* Página - sobre-mi */
+@use "pages/sobre-mi/bodysobremi";
+@use "pages/sobre-mi/contenido";
+@use "pages/sobre-mi/navbarsobremi";
+@use "pages/sobre-mi/objetivossobremi";
+@use "pages/sobre-mi/presentacion";
+@use "pages/sobre-mi/presentacionsobremi";
+
+/* Página - desarrollo-web */
+@use "pages/desarrollo-web/bodydesarrolloweb";
+@use "pages/desarrollo-web/navmenudesarrolloweb";
+@use "pages/desarrollo-web/proyectosdesarrolloweb";
+
+/* Página - contacto */
+@use "pages/contacto/bottoncontacto";
+@use "pages/contacto/bodycontacto";
+@use "pages/contacto/contactocontacto";
+@use "pages/contacto/formulariocontacto";
+@use "pages/contacto/fondocontacto";
+@use "pages/contacto/navbarcontacto";
+
+/* Página - blog */
+@use "pages/blog/bodyblog";
+@use "pages/blog/entradablog";
+@use "pages/blog/headerblog";
+@use "pages/blog/mainblog";
+@use "pages/blog/navbarblog";
+
+/* Responsive - 360px */
+@use "queries/mobile-360px/mobile360px";
+@use "queries/mobile-360px/indexmobile360px";
+@use "queries/mobile-360px/navbarmobile360px";
+@use "queries/mobile-360px/sobremimobile360px";
+@use "queries/mobile-360px/contactomobile360px";
+@use "queries/mobile-360px/desarrollowebmobile360px";
+@use "queries/mobile-360px/blogmobile360px";
+
+/* Responsive - 480px */
+@use "queries/mobile480px/mobile480px";
+@use "queries/mobile480px/bodymovilmobile480px";
+@use "queries/mobile480px/navbarmobile480px";
+@use "queries/mobile480px/sobremimobile480px";
+@use "queries/mobile480px/contactomobile480px";
+@use "queries/mobile480px/desarrollowebmobile480px";
+@use "queries/mobile480px/blogmobile480px";
+
+/* Responsive - 768px */
+@use "queries/tablet768px/tablet";
+@use "queries/tablet768px/desarrollowebtablet";
+@use "queries/tablet768px/titulosdesarrollo";

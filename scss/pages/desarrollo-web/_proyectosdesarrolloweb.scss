@@ -1,0 +1,70 @@
+@use "../../utilities/extended";
+@use "../../utilities/variables" as v;
+body.desarrollos .proyectos-web {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.75em;
+    padding: 2em 1.5em;
+    margin: 0 auto;
+    max-width: 1280px;
+    align-items: start;
+    /* alinear filas por arriba para evitar saltos */
+}
+
+/* ocupar columna completa */
+body.desarrollos .proyectos-web img,
+body.desarrollos .proyectos-web video,
+body.desarrollos .proyectos-web iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin: 0;
+    transform-origin: center center;
+    transition: transform 0.4s ease;
+}
+
+/* estructura de cada proyecto */
+body.desarrollos .proyectos-web>article,
+body.desarrollos .proyectos-web>.proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    padding: 0;
+    position: relative;
+}
+
+/* Contenedor de la media: permite expansión */
+body.desarrollos .proyectos-web .media {
+    position: relative;
+    overflow: visible;
+    border-radius: v.$radius-lg;
+}
+
+/* Transición y hover (opción 2: sombra + leve tintado) */
+body.desarrollos .proyectos-web .media img,
+body.desarrollos .proyectos-web .media video,
+body.desarrollos .proyectos-web .media iframe {
+    transition: transform 0.45s cubic-bezier(.25,.8,.25,1), filter 0.35s ease;
+}
+
+body.desarrollos .proyectos-web .media:hover img,
+body.desarrollos .proyectos-web .media:hover video,
+body.desarrollos .proyectos-web .media:hover iframe {
+    transform: scale(1.35);
+    filter: contrast(1.08) saturate(1.05);
+}
+
+/* Sombra envolvente para resaltar sin overlay plano */
+body.desarrollos .proyectos-web .media:hover {
+    box-shadow: 0 25px 55px -20px rgba(0,0,0,0.65), 0 10px 25px -5px rgba(0,0,0,0.45);
+}
+/* Ajuste de títulos para mejor alineación visual */
+body.desarrollos .proyectos-web h2 {
+    font-size: 1.25em;
+    line-height: 1.25;
+    margin: 0.4em 0 0.35em;
+    font-weight: 600;
+}

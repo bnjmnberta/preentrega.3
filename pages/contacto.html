@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Benjamin Berta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="contacto">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/img/logo/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sobre-mi.html">Sobre Mi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./desarrollos-web.html">Páginas Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<main>
+<div class="fondo-imagen"
+style="background-image: url('../assets/img/contactos/contacto-fondo.jpg')">
+    <div class="texto-central">Contacto</div>
+    <div class="iconos-redes">
+        <a class="icono-red" href="https://facebook.com" target="_blank" title="facebook">
+            <img src="../assets/img/contactos/icono-facebook.png" alt="facebook" width="80" height="55">
+        </a>
+        <a class="icono-red" href="https://x.com" target="_blank" title="x">
+            <img src="../assets/img/contactos/icono-x.png" alt="x" width="90" height="70">
+        </a>
+        <a class="icono-red" href="https://instagram.com" target="_blank" title="instagram">
+            <img src="../assets/img/contactos/icono-instagram.png" alt="instagram" width="80" height="55">
+        </a>
+        <a class="icono-red" href="https://linkedin.com" target="_blank" title="linkedin">
+            <img src="../assets/img/contactos/icono-linkedin.png" alt="linkedin" width="80" height="55">
+        </a>
+    </div>
+</div>
+<!-- Agregar más iconos
+<a class="icono-red" href="x" target="_blank" title="x">
+<img src="x" alt="x" width="x" height="x"> -->
+<form class="form-contacto">
+    <div class="form-col">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+    <div class="form-col">
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto">
+        <button type="submit">Enviar</button>
+    </div>
+</form>
+</main>
+<footer class="footer">
+    <p>
+        <b>
+            © 2025 Mi sitio web | Creado por Benjamin Berta
+        </b>
+    </p>
+</footer>
+</body>
+</html>

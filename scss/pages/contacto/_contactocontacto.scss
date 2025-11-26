@@ -1,0 +1,17 @@
+body.contacto .iconos-redes {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    display: flex;
+    gap: 1.5em;
+}
+
+body.contacto .icono-red {
+    width: 40px;
+    height: 40px;
+    background: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

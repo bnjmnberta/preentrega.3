@@ -1,0 +1,10 @@
+/* ===============================
+DISEÑO RESPONSIVE - MÓVIL
+=============================== */
+/* Media query para pantallas de 360px */
+@media (max-width: 360px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,19 @@
+@media (max-width: 360px) {
+    /* Navbar */
+    .navbar {
+        padding: 0.5em !important;
+    }
+
+    .navbar-logo {
+        max-width: 50px;
+    }
+
+    .navbar-nav {
+        gap: 0.5em !important;
+    }
+
+    .navbar .nav-link {
+        padding: 0.5em 0.75em !important;
+        font-size: 0.9em;
+    }
+}

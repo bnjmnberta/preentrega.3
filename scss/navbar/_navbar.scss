@@ -1,0 +1,29 @@
+@use "../utilities/extended";
+@use "../utilities/mixin" as mixin;
+@use "../utilities/variables" as v;
+
+/* Estilos genéricos de menú (cuando se usa .menu-navegacion) */
+.menu-navegacion {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navegacion ul {
+    @include mixin.flex-center(1.50rem);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu-navegacion a.boton {
+    @include mixin.button-base(0.75em, 1.25em, 4px);
+    color: inherit;
+    font-size: 1.25em;
+}
+
+.menu-navegacion a.boton:hover {
+    background: v.$gray-100;
+}

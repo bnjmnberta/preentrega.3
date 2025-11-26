@@ -1,0 +1,18 @@
+@media (max-width: 360px) {
+    /* Página contacto */
+    body.contacto .form-contacto {
+        padding: 2em 1em;
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    body.contacto .form-col {
+        gap: 1em;
+        font-size: 100%;
+    }
+
+    body.contacto .form-col input,
+    body.contacto .form-col textarea {
+        padding: 0.8em;
+    }
+}

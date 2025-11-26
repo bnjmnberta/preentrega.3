@@ -1,0 +1,15 @@
+%menu-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+%card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 1.5em;
+  color: #222;
+}

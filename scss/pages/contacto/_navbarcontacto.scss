@@ -1,0 +1,10 @@
+body.contacto .menu-navegacion-contacto {
+    display: flex;
+    gap: 2em;
+}
+
+body.contacto .menu-navegacion-contacto a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}

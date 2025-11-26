@@ -1,0 +1,22 @@
+@media (max-width: 360px) {
+    /* Página sobre-mi */
+    body.sobremi main.contenido-sobre-mi {
+        max-width: 95%;
+        padding: 1.5em 1em;
+        margin: 1.5em auto;
+    }
+
+    body.sobremi section h2 {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    body.sobremi .presentacion img {
+        max-width: 90%;
+    }
+
+    body.sobremi .lista-de-habilidades,
+    body.sobremi .lista-de-intereses {
+        gap: 0.6em;
+    }
+}

@@ -1,0 +1,32 @@
+body.sobremi main.contenido-sobre-mi {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+body.sobremi main.contenido-sobre-mi h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #000;
+}
+
+body.sobremi main.contenido-sobre-mi hr {
+    border: 1px solid #ddd;
+    margin-bottom: 2em;
+}
+
+body.sobremi section {
+    margin-bottom: 2.5em;
+}
+
+body.sobremi section h2 {
+    color: #333;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5em;
+}

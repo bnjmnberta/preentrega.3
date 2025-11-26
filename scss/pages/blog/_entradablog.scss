@@ -1,0 +1,23 @@
+@use "../../utilities/extended";
+@use "../../utilities/variables" as v;
+
+body.blog .blog-entrada {
+    @extend %card;
+    background: #a5a1a1;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: v.$radius-md;
+    text-align: left;
+}
+
+body.blog .blog-entrada h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.35em;
+}
+
+body.blog .blog-entrada p {
+    margin-bottom: 0.5em;
+    font-size: 1.05em;
+    line-height: 1.6;
+}

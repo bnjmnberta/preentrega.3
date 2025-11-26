@@ -1,0 +1,17 @@
+body.sobremi .presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+body.sobremi .presentacion img {
+    align-self: center;
+    margin: 1em 0;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+body.sobremi .presentacion p {
+    line-height: 1.6;
+    color: #333;
+}

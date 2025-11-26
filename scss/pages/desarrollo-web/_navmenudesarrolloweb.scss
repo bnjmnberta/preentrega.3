@@ -1,0 +1,21 @@
+body.desarrollos .header-menu-desarrollos-web {
+    background: #ac6d6d;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+body.desarrollos .menu-navegacion-desarrollos-web {
+    display: flex;
+    gap: 2em;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+body.desarrollos .menu-navegacion-desarrollos-web a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
