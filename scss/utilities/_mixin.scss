@@ -8,7 +8,7 @@ $breakpoints: (
     tablet-768: "(min-width: 481px) and (max-width: 768px)"
 );
 
-// Mixin de media queries: aplicar estilos con @include respond-to(<nombre>)
+// Mixin de media queries
 @mixin respond-to($name) {
     $query: map.get($breakpoints, $name);
 
