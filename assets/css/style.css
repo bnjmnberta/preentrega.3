@@ -88,6 +88,11 @@ body.blog .blog-main, body.blog .blog-entrada {
   background: #f0f0f0;
 }
 
+.navbar .navbar-brand .navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
 /* Pie de página */
 footer {
   width: 100%;
@@ -113,8 +118,8 @@ body.index {
 
 /* Contenedor del header con logo y menú */
 .header-container {
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 500px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   padding: 2em 1em;
@@ -155,7 +160,7 @@ body.index {
 body.index main.contenido-principal {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
-  padding: 2em;
+  padding: 2em 2em 1em 2em;
   margin: 0 auto 2em;
   max-width: 800px;
   text-align: center;
@@ -214,13 +219,13 @@ body.sobremi main.contenido-sobre-mi {
 
 body.sobremi main.contenido-sobre-mi h1 {
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   color: #000;
 }
 
 body.sobremi main.contenido-sobre-mi hr {
   border: 1px solid #ddd;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 body.sobremi section {
@@ -244,6 +249,7 @@ body.sobremi .navbar {
 }
 
 body.sobremi .objetivos p {
+  text-align: center;
   line-height: 1.6;
   color: #333;
 }
@@ -256,12 +262,13 @@ body.sobremi .presentacion {
 
 body.sobremi .presentacion img {
   align-self: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   max-width: 400px;
   border-radius: 12px;
 }
 
 body.sobremi .presentacion p {
+  text-align: center;
   line-height: 1.6;
   color: #333;
 }
@@ -393,6 +400,13 @@ body.contacto .texto-central {
   font-size: 400%;
 }
 
+body.contacto h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 body.contacto .iconos-redes {
   position: absolute;
   top: 70%;
@@ -414,7 +428,7 @@ body.contacto .icono-red {
 body.contacto .form-contacto {
   background: #ffffff;
   color: #222;
-  padding: 12em;
+  padding: 4em 5em 5em 5em;
   display: flex;
   gap: 7em;
   justify-content: center;
@@ -424,22 +438,22 @@ body.contacto .form-col {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  font-size: 150%;
+  gap: 1em;
+  font-size: 100%;
 }
 
 body.contacto .form-col input,
 body.contacto .form-col textarea {
   width: 100%;
-  padding: 2em;
+  padding: 0.2em;
   border: none;
-  background: #a5a1a1;
+  background: #ebe9e9;
   border-radius: 4px;
 }
 
 body.contacto .titulo-form {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 2em;
   font-weight: bold;
   margin-top: 1em;
 }
@@ -447,11 +461,21 @@ body.contacto .titulo-form {
 body.contacto .fondo-imagen {
   position: relative;
   width: 100%;
-  height: 350px;
-  background: #000 url("../img/contactos/contacto-fondo.jpg") no-repeat center;
+  /* Altura amplia para evitar bandas negras */
+  min-height: 100vh;
+  /* Imagen de fondo sin color negro, cubriendo todo el contenedor */
+  background: url("../img/contactos/contacto-fondo.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
+/* Ajuste responsive en móviles: reduce un poco la altura */
+@media (max-width: 480px) {
+  body.contacto .fondo-imagen {
+    min-height: 75vh;
+  }
+}
 body.contacto .menu-navegacion-contacto {
   display: flex;
   gap: 2em;
