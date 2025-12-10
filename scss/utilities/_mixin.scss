@@ -3,9 +3,16 @@
 
 // Mapa de breakpoints: usar con nombres consistentes en todo el proyecto
 $breakpoints: (
+    // Móvil muy pequeño
     mobile-360: "max-width: 360px",
+    // Móvil estándar
     mobile-480: "(min-width: 361px) and (max-width: 480px)",
-    tablet-768: "(min-width: 481px) and (max-width: 768px)"
+    // Tablet
+    tablet-768: "(min-width: 481px) and (max-width: 768px)",
+    // Laptop pequeña
+    laptop-1024: "(min-width: 769px) and (max-width: 1024px)",
+    // Desktop estándar
+    desktop-1280: "(min-width: 1025px) and (max-width: 1280px)"
 );
 
 // Mixin de media queries

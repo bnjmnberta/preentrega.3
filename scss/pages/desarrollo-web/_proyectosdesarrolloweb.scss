@@ -1,16 +1,19 @@
 @use "../../utilities/extended";
 @use "../../utilities/variables" as v;
+@use "../../utilities/mixin" as m;
+/* Columnas verticales tipo masonry */
 body.desarrollos .proyectos-web {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1.75em;
-    padding: 2em 1.5em;
+    column-count: 3;
+    column-gap: 2rem;
+    padding: 2rem 1.5rem;
     margin: 0 auto;
     max-width: 1280px;
-    align-items: start;
-    /* alinear filas por arriba para evitar saltos */
 }
+
+@include m.respond-to(desktop-1280) { body.desarrollos .proyectos-web { column-count: 3; } }
+@include m.respond-to(laptop-1024) { body.desarrollos .proyectos-web { column-count: 2; } }
+@include m.respond-to(tablet-768) { body.desarrollos .proyectos-web { column-count: 2; } }
+@include m.respond-to(mobile-480) { body.desarrollos .proyectos-web { column-count: 1; } }
 
 /* ocupar columna completa */
 body.desarrollos .proyectos-web img,
@@ -29,41 +32,97 @@ body.desarrollos .proyectos-web iframe {
 /* estructura de cada proyecto */
 body.desarrollos .proyectos-web>article,
 body.desarrollos .proyectos-web>.proyecto {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75em;
+    display: inline-block; /* necesario para columns */
+    width: 100%;
+    break-inside: avoid; /* evita cortes entre columnas */
+    margin: 0 0 2rem; /* espacio vertical entre items */
     padding: 0;
     position: relative;
+    background: transparent;
+}
+
+/* Medios con proporción consistente */
+.proyecto .media img,
+.proyecto .media video,
+.proyecto .media iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* CTA al fondo de la tarjeta */
+.proyecto .cta,
+.proyectos-web > article .cta {
+    margin-top: auto;
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Responsivo básico (complementa queries existentes) */
+@media (max-width: 768px) {
+    body.desarrollos .proyectos-web { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    body.desarrollos .proyectos-web { grid-template-columns: 1fr; }
 }
 
 /* Contenedor de la media: permite expansión */
 body.desarrollos .proyectos-web .media {
     position: relative;
-    overflow: visible;
+    overflow: hidden; /* recorta el zoom dentro del borde */
     border-radius: v.$radius-lg;
+    isolation: isolate;
+    /* Contenedor con relación de aspecto fija para evitar bandas */
+    aspect-ratio: 16 / 9;
+    background: transparent; /* no pintar fondo negro en el contenedor */
+    transition: transform 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s ease;
 }
 
 /* Transición y hover (opción 2: sombra + leve tintado) */
 body.desarrollos .proyectos-web .media img,
 body.desarrollos .proyectos-web .media video,
 body.desarrollos .proyectos-web .media iframe {
-    transition: transform 0.45s cubic-bezier(.25,.8,.25,1), filter 0.35s ease;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* llena la caja sin dejar bordes negros */
+    transition: filter 0.35s ease;
+    backface-visibility: hidden;
+    display: block;
+    border-radius: 0; /* el radio sólo en el contenedor para evitar fugas */
+    transform: translateZ(0);
+}
+
+/* Masking específico para iframes y videos que traen letterboxing interno */
+body.desarrollos .proyectos-web .media iframe,
+body.desarrollos .proyectos-web .media video,
+body.desarrollos .proyectos-web .media img {
+    clip-path: inset(0 round 12px); /* recorte perfecto con el mismo radio */
+    border: 0;
+    background: transparent;
+}
+
+body.desarrollos .proyectos-web .media:hover {
+    transform: scale(1.06); /* zoom del contenedor, recorte perfecto */
+    box-shadow: 0 18px 36px -14px rgba(0,0,0,0.55), 0 10px 22px -8px rgba(0,0,0,0.35);
 }
 
 body.desarrollos .proyectos-web .media:hover img,
 body.desarrollos .proyectos-web .media:hover video,
 body.desarrollos .proyectos-web .media:hover iframe {
-    transform: scale(1.35);
-    filter: contrast(1.08) saturate(1.05);
+    filter: contrast(1.03) saturate(1.02);
 }
 
 /* Sombra envolvente para resaltar sin overlay plano */
 body.desarrollos .proyectos-web .media:hover {
-    box-shadow: 0 25px 55px -20px rgba(0,0,0,0.65), 0 10px 25px -5px rgba(0,0,0,0.45);
+    box-shadow: 0 16px 32px -12px rgba(0,0,0,0.55), 0 8px 18px -6px rgba(0,0,0,0.35);
 }
 /* Ajuste de títulos para mejor alineación visual */
 body.desarrollos .proyectos-web h2 {
-    font-size: 1.25em;
+    font-size: 1.1em;
     line-height: 1.25;
     margin: 0.4em 0 0.35em;
     font-weight: 600;

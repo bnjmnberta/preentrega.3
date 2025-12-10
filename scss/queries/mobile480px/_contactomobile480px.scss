@@ -1,3 +1,21 @@
+/* Contacto - ajustes para móviles 480px */
+@media (max-width: 480px) {
+    body.contacto .fondo-imagen {
+        min-height: 80vh; /* un poco más alto que en 360px */
+        background-position: center; /* centrado general */
+    }
+
+    body.contacto .form-contacto {
+        flex-direction: column; /* apilar columnas en 480px también */
+        padding: 2rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    body.contacto .form-col input,
+    body.contacto .form-col textarea {
+        padding: 1.25rem; /* tamaño intermedio de padding */
+    }
+}
 @media (min-width: 361px) and (max-width: 480px) {
     /* Página contacto */
     body.contacto .form-contacto {

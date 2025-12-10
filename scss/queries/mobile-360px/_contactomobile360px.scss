@@ -1,3 +1,21 @@
+/* Contacto - ajustes para móviles 360px */
+@media (max-width: 360px) {
+    body.contacto .fondo-imagen {
+        min-height: 75vh; /* altura más contenida en móvil pequeño */
+        background-position: center top; /* priorizar parte superior de la imagen */
+    }
+
+    body.contacto .form-contacto {
+        flex-direction: column; /* apilar columnas */
+        padding: 1.5rem 1rem; /* reducir padding para caber mejor */
+        gap: 1rem;
+    }
+
+    body.contacto .form-col input,
+    body.contacto .form-col textarea {
+        padding: 1rem; /* inputs más compactos en 360px */
+    }
+}
 @media (max-width: 360px) {
     /* Página contacto */
     body.contacto .form-contacto {

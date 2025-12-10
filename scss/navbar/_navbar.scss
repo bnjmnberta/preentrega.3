@@ -2,6 +2,36 @@
 @use "../utilities/mixin" as mixin;
 @use "../utilities/variables" as v;
 
+/* Alineación del navbar y tamaño del logo */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-brand .navbar-logo {
+    width: 36px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+    .navbar .navbar-brand .navbar-logo {
+        width: 28px;
+    }
+}
+
 /* Estilos genéricos de menú (cuando se usa .menu-navegacion) */
 .menu-navegacion {
     width: 100%;
@@ -28,7 +58,4 @@
     background: v.$gray-100;
 }
 
-.navbar .navbar-brand .navbar-logo {
-    height: 50px;
-    width: auto;
-}
+/* (Regla duplicada eliminada para evitar conflicto de tamaños) */
