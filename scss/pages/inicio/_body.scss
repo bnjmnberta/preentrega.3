@@ -3,7 +3,9 @@ Página: index (página de inicio)
 ===============================*/
 body.index {
     background: url("../img/index/fondo.jpg") center center/cover no-repeat fixed;
-    color: #000;
-    flex-direction: column;
+    color: #000000;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }

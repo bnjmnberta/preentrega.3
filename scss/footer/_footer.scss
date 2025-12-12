@@ -1,11 +1,19 @@
 /* Pie de página */
 footer {
-    width: 100%;
-    margin-top: auto;
-    background: black;
-    color: #ffffff;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
+    width: 100%;
+    margin: 1em 0 0; /* margen por defecto para páginas generales */
+    color: #ffffff;
     padding: 1em 0;
     position: relative;
     z-index: 1;
+}
+
+/* Página de inicio: margen superior más amplio */
+body.index footer {
+    margin: 16em 0 0;
+    color: #000000;
 }

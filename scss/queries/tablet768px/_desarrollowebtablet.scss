@@ -1,33 +1,20 @@
 @media (min-width: 481px) and (max-width: 768px) {
   /* Página desarrollos web */
   body.desarrollos .proyectos-web {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 1.75em;
+    column-count: 2;
+    column-gap: 1.75em;
     padding: 1.5em 1.25em;
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    justify-items: stretch;
-    /* que cada celda use el 1fr completo */
-    align-items: start;
-    /* alinea filas desde arriba */
-    justify-content: center;
-    /* centra el grid en el contenedor */
   }
   
   /* Evitar cortes dentro de cada proyecto */
   body.desarrollos .proyectos-web > * {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75em;
-    overflow: hidden;
+    display: inline-block;
     width: 100%;
-    /* ocupa todo el ancho de su columna */
-    max-width: none;
-    /* sin límite adicional en hijos */
-    margin: 0;
-    /* evita desplazamientos laterales */
+    break-inside: avoid;
+    margin: 0 0 2rem;
   }
   body.desarrollos .proyectos-web img,
   body.desarrollos .proyectos-web video,

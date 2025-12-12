@@ -1,13 +1,11 @@
 body.contacto .fondo-imagen {
-        position: relative;
+    position: relative;
     width: 100%;
-        /* Altura amplia para evitar bandas negras */
-        min-height: 100vh;
-        /* Imagen de fondo sin color negro, cubriendo todo el contenedor */
-        background: url("../img/contactos/contacto-fondo.jpg") no-repeat center center;
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
+    min-height: 100vh; /* Altura amplia para evitar bandas negras */
+    background: url("../img/contactos/contacto-fondo.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 /* Ajuste responsive en móviles: reduce un poco la altura */
