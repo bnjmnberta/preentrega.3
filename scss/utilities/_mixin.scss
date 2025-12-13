@@ -1,7 +1,7 @@
 // Conjunto de mixins reutilizables y mapa de breakpoints
 @use "sass:map";
 
-// Mapa de breakpoints: usar con nombres consistentes en todo el proyecto
+// Mapa de breakpoints
 $breakpoints: (
     // Móvil muy pequeño
     mobile-360: "max-width: 360px",
@@ -30,7 +30,7 @@ $breakpoints: (
     }
 }
 
-// Mixin base para botones: define visual base (padding/radio/transición)
+// Mixin base para botones
 @mixin button-base($py: 0.5em, $px: 1em, $radius: 4px) {
     display: inline-block;
     text-decoration: none;
@@ -39,7 +39,7 @@ $breakpoints: (
     transition: 0.2s;
 }
 
-// Mixin de centrado flex: centrar contenido en ambos ejes con gap opcional
+// Mixin de centrado flex
 @mixin flex-center($gap: 0) {
     display: flex;
     align-items: center;

@@ -30,8 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden; /* evita barras laterales por scroll */
-  padding: 0 1.25rem; /* aire lateral global en desktop */
+  overflow-x: hidden;
+  padding: 0 1.25rem;
   position: relative;
   color: #fff;
 }
@@ -169,7 +169,7 @@ footer {
 
 /* Página de inicio */
 body.index footer {
-  margin: 16em 0 0;
+  margin: 12em 0 0;
   color: #000000;
 }
 
@@ -440,7 +440,6 @@ body.sobremi .subnav-link:hover {
   transform: translateY(-1px);
 }
 
-/* Suavizar scroll a anclas */
 html {
   scroll-behavior: smooth;
 }
@@ -614,9 +613,6 @@ body.desarrollos .proyectos-web .proyecto a {
   display: block;
   text-align: center;
   margin: 0.4em auto;
-}
-body.desarrollos .proyectos-web {
-  /* Párrafos centrados y blanco tenue en desarrollos web */
 }
 body.desarrollos .proyectos-web p {
   text-align: center;
@@ -792,8 +788,8 @@ Página: contacto
 body.contacto {
   background: #000;
   color: #fff;
-  padding: 0; /* anula el padding global para evitar franjas laterales */
-  overflow-x: hidden; /* asegura que no haya desbordes horizontales */
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body.contacto .header-contacto {
@@ -918,7 +914,7 @@ body.contacto .form-col button {
 body.contacto .fondo-imagen {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Altura amplia para evitar bandas negras */
+  min-height: 100vh;
   background: url("../img/contactos/contacto-fondo.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;

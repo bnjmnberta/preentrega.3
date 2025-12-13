@@ -20,8 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-x: hidden; /* evita barras laterales por scroll */
-    padding: 0 1.25rem; /* aire lateral global en desktop */
+    overflow-x: hidden;
+    padding: 0 1.25rem;
     position: relative;
     color: #fff;
 }
