@@ -5,14 +5,14 @@ footer {
     align-items: center; 
     text-align: center;
     width: 100%;
-    margin: 1em 0 0; /* margen por defecto para páginas generales */
+    margin: 1em 0 0;
     color: #ffffff;
     padding: 1em 0;
     position: relative;
     z-index: 1;
 }
 
-/* Página de inicio: margen superior más amplio */
+/* Página de inicio */
 body.index footer {
     margin: 16em 0 0;
     color: #000000;

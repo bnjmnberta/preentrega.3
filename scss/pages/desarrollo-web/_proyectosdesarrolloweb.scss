@@ -2,23 +2,27 @@
 @use "../../utilities/variables" as v;
 @use "../../utilities/mixin" as m;
 /* Columnas verticales tipo masonry */
-body.desarrollos .proyectos-web {
-    column-count: 3;
-    column-gap: 2rem;
-    padding: 2rem 1.5rem;
-    margin: 0 auto;
-    max-width: 1280px;
+body.desarrollos {
+    .proyectos-web {
+        column-count: 3;
+        column-gap: 2rem;
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+        max-width: 1280px;
+
+        @include m.respond-to(desktop-1280) { column-count: 3; }
+        @include m.respond-to(laptop-1024) { column-count: 2; }
+        @include m.respond-to(tablet-768) { column-count: 2; }
+        @include m.respond-to(mobile-480) { column-count: 1; }
+    }
 }
 
-@include m.respond-to(desktop-1280) { body.desarrollos .proyectos-web { column-count: 3; } }
-@include m.respond-to(laptop-1024) { body.desarrollos .proyectos-web { column-count: 2; } }
-@include m.respond-to(tablet-768) { body.desarrollos .proyectos-web { column-count: 2; } }
-@include m.respond-to(mobile-480) { body.desarrollos .proyectos-web { column-count: 1; } }
-
 /* ocupar columna completa */
-body.desarrollos .proyectos-web img,
-body.desarrollos .proyectos-web video,
-body.desarrollos .proyectos-web iframe {
+body.desarrollos {
+    .proyectos-web {
+        img,
+        video,
+        iframe {
     max-width: 100% !important;
     width: 100% !important;
     height: auto;
@@ -27,11 +31,14 @@ body.desarrollos .proyectos-web iframe {
     margin: 0;
     transform-origin: center center;
     transition: transform 0.4s ease;
+        }
+    }
 }
 
 /* estructura de cada proyecto */
-body.desarrollos .proyectos-web>article,
-body.desarrollos .proyectos-web>.proyecto {
+body.desarrollos {
+    .proyectos-web>article,
+    .proyectos-web>.proyecto {
     display: inline-block; /* necesario para columns */
     width: 100%;
     break-inside: avoid; /* evita cortes entre columnas */
@@ -39,84 +46,121 @@ body.desarrollos .proyectos-web>.proyecto {
     padding: 0;
     position: relative;
     background: transparent;
+    }
 }
 
 /* Medios con proporción consistente */
-.proyecto .media img,
-.proyecto .media video,
-.proyecto .media iframe {
+.proyecto {
+    .media {
+        img,
+        video,
+        iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 12px;
+        }
+    }
 }
 
 /* CTA al fondo de la tarjeta */
-.proyecto .cta,
-.proyectos-web > article .cta {
-    margin-top: auto;
-    display: flex;
-    gap: 0.75rem;
+.proyecto {
+    .cta { margin-top: auto; display: flex; gap: 0.75rem; }
 }
+.proyectos-web > article { .cta { margin-top: auto; display: flex; gap: 0.75rem; } }
 
 /* Responsivo básico (delegado a mixins respond-to existentes) */
 
 /* Contenedor de la media: permite expansión */
-body.desarrollos .proyectos-web .media {
-    position: relative;
-    overflow: hidden; /* recorta el zoom dentro del borde */
-    border-radius: v.$radius-lg;
-    isolation: isolate;
-    /* Contenedor con relación de aspecto fija para evitar bandas */
-    aspect-ratio: 16 / 9;
-    background: transparent; /* no pintar fondo negro en el contenedor */
-    transition: transform 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s ease;
+body.desarrollos {
+    .proyectos-web {
+        .media {
+            position: relative;
+            overflow: hidden; /* recorta el zoom dentro del borde */
+            border-radius: v.$radius-lg;
+            isolation: isolate;
+            /* Contenedor con relación de aspecto fija para evitar bandas */
+            aspect-ratio: 16 / 9;
+            background: transparent; /* no pintar fondo negro en el contenedor */
+            transition: transform 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s ease;
+        }
+    }
 }
 
 /* Transición y hover (opción 2: sombra + leve tintado) */
-body.desarrollos .proyectos-web .media img,
-body.desarrollos .proyectos-web .media video,
-body.desarrollos .proyectos-web .media iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* llena la caja sin dejar bordes negros */
-    transition: filter 0.35s ease;
-    backface-visibility: hidden;
-    display: block;
-    border-radius: 0; /* el radio sólo en el contenedor para evitar fugas */
-    transform: translateZ(0);
+body.desarrollos {
+    .proyectos-web {
+        .media {
+            img,
+            video,
+            iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* llena la caja sin dejar bordes negros */
+                transition: filter 0.35s ease;
+                backface-visibility: hidden;
+                display: block;
+                border-radius: 0; /* el radio sólo en el contenedor para evitar fugas */
+                transform: translateZ(0);
+            }
+        }
+    }
 }
 
 /* Masking específico para iframes y videos que traen letterboxing interno */
-body.desarrollos .proyectos-web .media iframe,
-body.desarrollos .proyectos-web .media video,
-body.desarrollos .proyectos-web .media img {
-    clip-path: inset(0 round 12px); /* recorte perfecto con el mismo radio */
-    border: 0;
-    background: transparent;
+body.desarrollos {
+    .proyectos-web {
+        .media {
+            iframe,
+            video,
+            img {
+                clip-path: inset(0 round 12px); /* recorte perfecto con el mismo radio */
+                border: 0;
+                background: transparent;
+            }
+        }
+    }
 }
 
-body.desarrollos .proyectos-web .media:hover {
-    transform: scale(1.06); /* zoom del contenedor, recorte perfecto */
-    box-shadow: 0 18px 36px -14px rgba(0,0,0,0.55), 0 10px 22px -8px rgba(0,0,0,0.35);
+body.desarrollos {
+    .proyectos-web {
+        .media:hover {
+            transform: scale(1.06);
+            box-shadow: 0 18px 36px -14px rgba(0,0,0,0.55), 0 10px 22px -8px rgba(0,0,0,0.35);
+        }
+    }
 }
 
-body.desarrollos .proyectos-web .media:hover img,
-body.desarrollos .proyectos-web .media:hover video,
-body.desarrollos .proyectos-web .media:hover iframe {
-    filter: contrast(1.03) saturate(1.02);
+body.desarrollos {
+    .proyectos-web {
+        .media:hover {
+            img,
+            video,
+            iframe {
+                filter: contrast(1.03) saturate(1.02);
+            }
+        }
+    }
 }
 
 /* Sombra envolvente para resaltar sin overlay plano */
-body.desarrollos .proyectos-web .media:hover {
-    box-shadow: 0 16px 32px -12px rgba(0,0,0,0.55), 0 8px 18px -6px rgba(0,0,0,0.35);
+body.desarrollos {
+    .proyectos-web {
+        .media:hover {
+            box-shadow: 0 16px 32px -12px rgba(0,0,0,0.55), 0 8px 18px -6px rgba(0,0,0,0.35);
+        }
+    }
 }
 /* Ajuste de títulos para mejor alineación visual */
-body.desarrollos .proyectos-web h2 {
-    font-size: 1.1em;
-    line-height: 1.25;
-    margin: 0.4em 0 0.35em;
-    font-weight: 600;
+body.desarrollos {
+    .proyectos-web {
+        h2 {
+            font-size: 1.1em;
+            line-height: 1.25;
+            margin: 0.4em 0 0.35em;
+            font-weight: 600;
+        }
+    }
 }

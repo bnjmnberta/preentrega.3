@@ -52,18 +52,31 @@
         </nav>
 
         <main>
-            <h1>Blog</h1>
-            <hr />
-            <p>
-                Bienvenido a mi blog, donde comparto mis pensamientos, experiencias y
-                conocimientos sobre desarrollo web, tecnología y más. Aquí encontrarás
-                artículos que abarcan desde tutoriales prácticos hasta reflexiones sobre
-                las últimas tendencias en la industria.
-            </p>
+            <section class="herocard">
+                <div class="tarjeta-heroe">
+                    <h1 class="titulo">Blog</h1>
+                    <p class="descripcion">
+                        Bienvenido a mi blog, donde comparto mis pensamientos, experiencias y
+                        conocimientos sobre desarrollo web, tecnología y más. Aquí encontrarás
+                        artículos que abarcan desde tutoriales prácticos hasta reflexiones sobre
+                        las últimas tendencias en la industria.
+                    </p>
+                </div>
+            </section>
 
-            <section class="articulos">
+            <section class="articulos lista-blog">
                 <article class="blog-entrada">
                     <h2>Por qué elegí ser desarrollador Full Stack</h2>
+                    <div class="meta">
+                        <span class="fecha">12 Dic 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">6 min</span>
+                    </div>
+                    <div class="etiquetas">
+                        <span class="etiqueta">Full Stack</span>
+                        <span class="etiqueta">Carrera</span>
+                        <span class="etiqueta">Motivación</span>
+                    </div>
                     <p>
                         Desde que descubrí la programación, me llamó la atención entender
                         cómo funcionan las cosas por dentro. Al principio me enfocaba solo
@@ -85,6 +98,16 @@
 
                 <article class="blog-entrada">
                     <h2>Cómo hice mi primer sitio web</h2>
+                    <div class="meta">
+                        <span class="fecha">05 Dic 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">4 min</span>
+                    </div>
+                    <div class="etiquetas">
+                        <span class="etiqueta">Aprendizaje</span>
+                        <span class="etiqueta">Primeros pasos</span>
+                        <span class="etiqueta">HTML/CSS</span>
+                    </div>
                     <p>
                         Mi primer sitio web fue un proyecto que nació de la curiosidad y
                         las ganas de aprender. Empecé con lo básico: HTML para estructurar
@@ -106,6 +129,16 @@
 
                 <article class="blog-entrada">
                     <h2>Qué es Frontend, Backend y cómo trabajan juntos</h2>
+                    <div class="meta">
+                        <span class="fecha">28 Nov 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">8 min</span>
+                    </div>
+                    <div class="etiquetas">
+                        <span class="etiqueta">Frontend</span>
+                        <span class="etiqueta">Backend</span>
+                        <span class="etiqueta">Arquitectura</span>
+                    </div>
                     <p>
                         El Frontend es la parte del desarrollo web que los usuarios ven e
                         interactúan directamente. Incluye todo lo visual de un sitio o
@@ -132,6 +165,72 @@
                         colaboración entre lo visible y lo invisible, donde el frontend da
                         forma a la experiencia y el backend la hace posible. Juntos forman
                         el corazón de cualquier aplicación web moderna.
+                    </p>
+                </article>
+                <!-- Nuevas entradas para rellenar y probar layout -->
+                <article class="blog-entrada">
+                    <h2>Cómo aplico accesibilidad en mis proyectos</h2>
+                    <div class="meta">
+                        <span class="fecha">20 Nov 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">5 min</span>
+                    </div>
+                    <div class="etiquetas">
+                        <span class="etiqueta">Accesibilidad</span>
+                        <span class="etiqueta">Experiencia de usuario</span>
+                    </div>
+                    <p>
+                        En cada sitio que diseño busco que cualquier persona pueda navegarlo con comodidad. Me enfoco en semántica, contraste y tamaños táctiles para que la experiencia sea clara y accesible. Son detalles que elevan la calidad del proyecto y hablan de profesionalismo.
+                    </p>
+                    <p>
+                        Valido el contraste con Lighthouse y Contrast Checker, apuesto por niveles AA/AAA y cuido el foco visible y la navegación por teclado. Utilizo etiquetas como header, main, nav y section para que los lectores de pantalla entiendan la estructura.
+                    </p>
+                    <p>
+                        Además, documento decisiones y defino textos alternativos en imágenes clave. Cuando la semántica no alcanza, sumo atributos aria para que nadie se quede afuera. Esto hace mis proyectos más inclusivos y confiables.
+                    </p>
+                </article>
+                <article class="blog-entrada">
+                    <h2>Mi enfoque para optimizar rendimiento</h2>
+                    <div class="meta">
+                        <span class="fecha">15 Nov 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">7 min</span>
+                    </div>
+                    <div class="etiquetas">
+                        <span class="etiqueta">Performance</span>
+                        <span class="etiqueta">Optimización</span>
+                        <span class="etiqueta">Mejores prácticas</span>
+                    </div>
+                    <p>
+                        Me gusta que los sitios se sientan rápidos y livianos. Aplico lazy-loading, minificación y buen cacheo. El objetivo es que tu contenido cargue sin fricciones, incluso en conexiones móviles.
+                    </p>
+                    <p>
+                        En mis proyectos uso formatos modernos como WebP/AVIF y preparo imágenes responsivas. Activo loading="lazy" cuando corresponde, ordeno los assets y evito cargar lo que no se usa.
+                    </p>
+                    <p>
+                        Luego mido y ajusto continuamente con Lighthouse y WebPageTest, priorizando LCP, CLS y TBT. Esta mirada técnica se traduce en una experiencia más fluida y profesional.
+                    </p>
+                </article>
+                <article class="blog-entrada">
+                    <h2>Así construyo sistemas de color</h2>
+                    <div class="meta">
+                        <span class="fecha">10 Nov 2025</span>
+                        <span>•</span>
+                        <span class="tiempo">6 min</span>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">UI/UX</span>
+                        <span class="chip">Identidad visual</span>
+                        <span class="chip">Accesibilidad</span>
+                    </div>
+                    <p>
+                        La identidad visual es clave. Trabajo con paletas consistentes, estados (hover/active) y contrastes que funcionan en claro y oscuro. Busco que el diseño sea elegante y accesible.
+                    </p>
+                    <p>
+                        Para cada proyecto defino una paleta base y derivo escalas de tono. Creo tokens reutilizables y cuido la legibilidad en múltiples fondos. Esto hace que el sitio se vea profesional y coherente.
+                    </p>
+                    <p>
+                        Documentar el sistema me ayuda a mantener orden y escalabilidad. Valido contraste con WCAG y preparo variantes accesibles para componentes críticos. Así logro un lenguaje visual sólido y adaptable.
                     </p>
                 </article>
                 <!-- Agregar más artículos según sea necesario -->

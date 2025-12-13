@@ -1,40 +1,76 @@
 @use "../../utilities/extended";
 @use "../../utilities/mixin" as m;
+@use "../../utilities/variables" as v;
 
 body.blog .blog-main {
     @extend %card;
-    max-width: 900px;
-    margin: 2em auto;
+    max-width: 1000px;
+    margin: 2.5em auto;
     background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    padding: 2em;
+    backdrop-filter: saturate(1.2) blur(6px);
+    border-radius: 16px;
+    padding: 2.25em 1.5em;
     color: #222;
-    font-size: 1.05rem;
+    font-size: 1.06rem;
+    box-shadow: 0 18px 36px -14px rgba(0,0,0,0.45), 0 10px 22px -8px rgba(0,0,0,0.30);
+}
+
+/* Hero Card para página de Blog */
+body.blog .herocard {
+    padding: v.$space-4 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.blog .herocard .tarjeta-heroe {
+    @extend %card;
+    max-width: 960px;
+    width: 100%;
+    border-radius: v.$radius-lg;
+    padding: v.$space-4;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 14px 28px -16px rgba(0,0,0,0.35), 0 8px 16px -8px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: v.$space-2;
+}
+body.blog .herocard .tarjeta-heroe .titulo {
+    margin-bottom: v.$space-2;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    line-height: 1.15;
+}
+body.blog .herocard .tarjeta-heroe .descripcion {
+    color: #000000;
+    margin: 0 auto v.$space-2 auto;
+    max-width: 72ch;
 }
 
 /* Listado de entradas del blog en columnas */
 
-body.blog .blog-list {
+body.blog .lista-blog {
     column-count: 3;
-    column-gap: 2rem;
+    column-gap: 2.25rem;
     max-width: 1280px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 2.25rem auto;
+    padding: 0 1.25rem;
 }
 
-/* Cada entrada fluye por columnas */
-body.blog .blog-list .blog-entrada {
+body.blog .lista-blog .blog-entrada {
     display: inline-block;
     width: 100%;
     break-inside: avoid;
     margin: 0 0 2rem;
 }
 @include m.respond-to(laptop-1024) {
-    body.blog .blog-list { column-count: 2; }
+    body.blog .lista-blog { column-count: 2; column-gap: 2rem; }
 }
 @include m.respond-to(tablet-768) {
-    body.blog .blog-list { column-count: 2; }
+    body.blog .lista-blog { column-count: 2; column-gap: 1.75rem; }
 }
 @include m.respond-to(mobile-480) {
-    body.blog .blog-list { column-count: 1; }
+    body.blog .lista-blog { column-count: 1; column-gap: 1.25rem; }
 }

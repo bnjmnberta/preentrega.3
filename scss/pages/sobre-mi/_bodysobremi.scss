@@ -5,7 +5,18 @@ body.sobremi {
     background: url("../img/index/fondo.jpg") center center/cover no-repeat fixed;
     color: #000;
     text-align: center;
+    /* Evitar barras negras/overflow horizontal */
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
 }
+
+/* Evitar solapamiento con navbar sticky */
+/* Sin offset: navbar en flujo normal */
+body.sobremi .layout {
+    padding-top: 0;
+}
+
 
 body.sobremi .habilidades,
 body.sobremi .intereses {

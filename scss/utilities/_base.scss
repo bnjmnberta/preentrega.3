@@ -2,6 +2,10 @@
 	Base (estilos globales)
 	------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+html {
+    width: 100%;
+    overflow-x: hidden; /* asegura que no haya desbordes horizontales */
+}
 body,
 h1,
 h2,
@@ -15,7 +19,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden; /* evita barras laterales por scroll */
+    padding: 0 1.25rem; /* aire lateral global en desktop */
     position: relative;
     color: #fff;
 }

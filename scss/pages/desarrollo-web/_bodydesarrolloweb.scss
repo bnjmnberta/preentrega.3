@@ -1,3 +1,7 @@
+@use "../../utilities/variables" as v;
+@use "../../utilities/mixin" as mixin;
+@use "../../utilities/extended";
+
 /* ===============================
 Página: desarrollos-web
 =============================== */
@@ -5,4 +9,90 @@ body.desarrollos {
     background: #000000;
     color: #ffffff;
     text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+
+    /* Offset y resets específicos */
+    .layout { padding-top: 0; }
+    main {
+        h1 { all: unset; }
+    }
+
+    /* Hero Card para desarrollos web */
+    .herocard {
+        padding: v.$space-4 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tarjeta-heroe {
+            max-width: 960px;
+            width: 100%;
+            @extend %card;
+            border-radius: v.$radius-lg;
+            padding: v.$space-4;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: v.$space-2;
+
+            .titulo {
+                margin-bottom: v.$space-2;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+                line-height: 1.15;
+            }
+
+            .descripcion {
+                color: #000000;
+                margin: 0 auto v.$space-2 auto;
+                max-width: 72ch;
+            }
+        }
+    }
+
+    /* Proyectos */
+    .proyectos-web {
+        h2 {
+            display: block;
+            margin: 0.4em auto 0.6em;
+            padding: 0.4rem 0.8rem;
+            background: #ffffff;
+            color: #000000;
+            border: 1px solid #e8eaf0;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Tarjetas de proyecto */
+        .proyecto {
+            margin: v.$space-3 0;
+            text-align: left;
+            @extend %card;
+            border-radius: v.$radius-lg;
+
+            .media {
+                border-radius: v.$radius-md;
+                overflow: hidden;
+                margin: v.$space-2 0;
+            }
+
+            a {
+                display: block;
+                text-align: center;
+                margin: 0.4em auto;
+            }
+        }
+
+        /* Párrafos centrados y blanco tenue en desarrollos web */
+        p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
 }

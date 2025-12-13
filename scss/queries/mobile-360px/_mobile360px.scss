@@ -6,5 +6,6 @@ DISEÑO RESPONSIVE - MÓVIL
     body {
         width: 100%;
         overflow-x: hidden;
+        padding: 0 1rem; /* aire lateral en móvil pequeño */
     }
 }

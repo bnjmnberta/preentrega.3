@@ -4,6 +4,8 @@ Página: contacto
 body.contacto {
     background: #000;
     color: #fff;
+    padding: 0; /* anula el padding global para evitar franjas laterales */
+    overflow-x: hidden; /* asegura que no haya desbordes horizontales */
 }
 
 body.contacto .header-contacto {
@@ -16,6 +18,7 @@ body.contacto .header-contacto {
 }
 
 body.contacto .texto-central {
+    color: black;
     position: absolute;
     top: 30%;
     left: 10%;
